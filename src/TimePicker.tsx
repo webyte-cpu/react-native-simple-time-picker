@@ -111,7 +111,7 @@ export function TimePicker({
       );
     }
 
-    for (let i = 0; i <= MAX_HOURS; i += hoursInterval) {
+    for (let i = isAmpm ? 1 : 0; i <= (isAmpm ? MAX_HOURS + 1 : MAX_HOURS); i += hoursInterval) {
       items.push(
         <Picker.Item
           testID="hoursItem"
